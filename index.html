@@ -321,17 +321,27 @@
         }
     </style>
 
-<style id="footer-click-fix">
+
+
+<style id="footer-force-click-fix">
   footer {
-    position: relative;
-    z-index: 50;
-    pointer-events: auto;
+    position: relative !important;
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
+    isolation: isolate !important;
+  }
+
+  footer,
+  footer * {
+    pointer-events: auto !important;
   }
 
   footer a {
-    position: relative;
-    z-index: 51;
-    pointer-events: auto;
+    position: relative !important;
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    text-decoration: underline !important;
   }
 </style>
 
@@ -407,7 +417,7 @@
         <footer>
             <p>Generatore di Password Sicure di <a href="https://www.gabrieleviola.it" target="_blank" rel="noopener">Gabriele Viola</a> &copy; <span class="current-year"></span> - Le password vengono generate localmente nel browser e non vengono salvate o trasmesse da questo tool</p>
         
-            <p><a href="https://www.gabrieleviola.it/informativa-privacy-progetti-e-siti-statici/" target="_blank" rel="noopener">Privacy policy</a></p>
+            <p><a href="https://www.gabrieleviola.it/informativa-privacy-progetti-e-siti-statici/" target="_blank" rel="noopener" style="position:relative; z-index:2147483647; pointer-events:auto; cursor:pointer;">Privacy policy</a></p>
         </footer>
     </div>
     
